@@ -1,0 +1,31 @@
+{
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "jsxSingleQuote": false,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "./App",
+    "^@/components$",
+    "^@/components/*(.*)$",
+    "^@/screens",
+    "^@/screens/*(.*)$",
+    "^@/store",
+    "^@/store/*(.*)$",
+    "^@/api",
+    "^@/utils",
+    "^@/utils/*(.*)$",
+    "^@/helpers",
+    "^@/types|./_type",
+    "^@/routes",
+    "^@/assets/images/*(.*)$",
+    "^@/assets/icons/*(.*)$",
+    "^@/assets/styles/*(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

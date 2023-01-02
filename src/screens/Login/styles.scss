@@ -1,0 +1,173 @@
+.LoginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  .header {
+    &__logo {
+      cursor: pointer;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      height: 120px;
+      z-index: 1;
+    }
+  }
+
+  .form {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px 10px 0 0;
+    margin-top: 15vh;
+    height: 85vh;
+    width: 430px;
+    z-index: 1;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      margin: 60px;
+    }
+
+    &__title {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    &__input {
+      &:focus {
+        outline: none;
+      }
+
+      .is-invalid {
+        border-bottom: 2px solid #e87c03 !important;
+      }
+
+      margin-top: 16px;
+      padding: 0 20px;
+      color: white;
+      font-size: 18px;
+      height: 48px;
+      width: calc(100% - 40px);
+      border: 0;
+      border-radius: 3px;
+      background-color: #333333;
+    }
+
+    &__error {
+      color: #e87c03;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    &__button {
+      &:hover {
+        background-color: #f6121d;
+        cursor: pointer;
+      }
+
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      height: 48px;
+      margin-top: 40px;
+      background-color: #e50815;
+      border: 0;
+      border-radius: 5px;
+    }
+
+    .other {
+      margin-top: 70px;
+      color: #888;
+
+      &__title {
+        font-size: 16px;
+        margin-bottom: 15px;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__subtitle {
+        font-size: 13px;
+      }
+    }
+
+  }
+
+  .checkbox {
+    margin-top: 16px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    &__input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkbox__checkmark {
+        background-color: #888;
+        border-radius: 2px;
+        &:after {
+          display: block;
+        }
+      }
+    }
+
+    &__text {
+      position: absolute;
+      color: #888;
+      font-size: 13px;
+      left: 20px;
+    }
+
+    &__checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      background-color: #888;
+      border-radius: 2px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 4px;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0,
+      rgba(0, 0, 0, 0.5) 20%
+    );
+  }
+}
